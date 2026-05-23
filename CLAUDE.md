@@ -4,10 +4,11 @@ GitHub 커밋을 AI가 블로그 포스트로 자동 변환하는 웹 애플리�
 
 ## 기술 스택
 
-- **Frontend**: React
+- **Frontend**: React (Vite, JavaScript)
 - **Backend**: Node.js + Express
 - **Database**: MongoDB
 - **외부 API**: GitHub API, OpenAI API
+- **패키지 매니저**: npm
 - **환경변수**: `.env` — `GITHUB_TOKEN`, `OPENAI_API_KEY`
 
 ## 프로젝트 구조
@@ -121,6 +122,9 @@ AI 요약 생성 시 반드시 `GET /commits/:sha`로 상세 조회 후 `patch` 
 
 **중복 요청 방지**
 로딩 중에는 버튼 비활성화 처리 필수 (AI 요약, 저장 등).
+
+**CORS 설정 필수**
+Vite 개발 서버(5173포트)에서 Express로 API 요청 시 브라우저가 차단함. 백엔드에 `cors` 패키지를 설치하고 `app.use(cors())`로 허용해야 함.
 
 ## 에러 처리 원칙
 

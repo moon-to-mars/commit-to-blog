@@ -17,7 +17,7 @@
 ## 2주차 — 구현
 
 ### 프로젝트 세팅
-- [ ] frontend / backend 폴더 구조 및 package.json 초기 세팅
+- [ ] frontend / backend 폴더 구조 및 package.json 초기 세팅 (Vite+React JS / Express, npm, cors 패키지)
 - [ ] .env 파일 설정 (GITHUB_TOKEN, OPENAI_API_KEY)
 - [ ] MongoDB 연결 설정
 - [ ] Express 서버 기본 세팅 (라우터 구조, CORS, 환경변수 로드)
