@@ -1,3 +1,9 @@
+---
+name: commit
+description: 커밋 준비 단계를 진행합니다. 변경사항을 요약하고 checklist.md를 업데이트한 뒤 커밋을 안내합니다. /workflow에서 자동 호출됩니다.
+depends_on: [review]
+---
+
 # Commit 준비 단계
 
 ## 목적

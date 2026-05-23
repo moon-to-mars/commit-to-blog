@@ -1,3 +1,9 @@
+---
+name: implement
+description: 구현 단계를 진행합니다. 설계 단계에서 합의한 내용을 실제 코드로 작성합니다. /workflow에서 자동 호출됩니다.
+depends_on: [design]
+---
+
 # 구현 단계
 
 ## 목적
@@ -12,4 +18,4 @@
 - 중요한 것은 잠깐 멈추고 사용자에게 물어본다
 
 ## 완료 조건
-코드 작성이 끝났을 때 → `stages/review.md`로 이동
+코드 작성이 끝났을 때 → workflow가 `review` 스킬을 발동한다

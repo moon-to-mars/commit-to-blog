@@ -1,3 +1,9 @@
+---
+name: confirm
+description: 확인 단계를 진행합니다. 리뷰에서 받은 피드백을 반영해 코드를 수정하고 다시 리뷰로 돌아갑니다. /workflow에서 자동 호출됩니다.
+depends_on: [review]
+---
+
 # 확인 단계
 
 ## 목적
@@ -20,4 +26,4 @@
 ```
 
 ## 완료 조건
-수정 완료 후 → `stages/review.md`로 돌아가 다시 리뷰를 진행한다
+수정 완료 후 → workflow가 `review` 스킬을 다시 발동한다 (리뷰 ↔ 확인 루프)
