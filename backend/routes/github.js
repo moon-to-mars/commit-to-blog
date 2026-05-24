@@ -23,8 +23,15 @@ router.get('/repos', async (req, res) => {
 });
 
 // GET /api/github/repos/:owner/:repo/branches
-router.get('/repos/:owner/:repo/branches', (req, res) => {
-  res.json({ message: 'TODO' });
+router.get('/repos/:owner/:repo/branches', async (req, res) => {
+  const { owner, repo } = req.params;
+  try {
+    const response = await githubAxios.get(`/repos/${owner}/${repo}/branches`);
+    const branches = response.data.map(({ name }) => ({ name }));
+    res.json(branches);
+  } catch (err) {
+    res.status(500).json({ error: '브랜치 목록을 불러오지 못했습니다.' });
+  }
 });
 
 // GET /api/github/repos/:owner/:repo/commits?sha=

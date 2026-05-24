@@ -24,7 +24,7 @@
 
 ### 백엔드 — GitHub API 연동
 - [x] 저장소 검색 API (`GET /api/github/repos?q=`) (axios 사용)
-- [ ] 브랜치 목록 API (`GET /api/github/repos/:owner/:repo/branches`)
+- [x] 브랜치 목록 API (`GET /api/github/repos/:owner/:repo/branches`)
 - [ ] 커밋 목록 API (`GET /api/github/repos/:owner/:repo/commits?sha=`)
 - [ ] AI 요약 생성 API (`POST /api/github/.../commits/:sha/summary`) — 커밋 상세(patch) 조회 후 OpenAI 호출
 - [ ] 유저 프로필 API (`GET /api/user`)
