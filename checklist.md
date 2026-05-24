@@ -34,7 +34,7 @@
 
 ### 프론트엔드 — 공통
 - [x] React Router 설정 및 Layout 컴포넌트
-- [ ] Header 컴포넌트 (Logo, Nav, UserAvatar)
+- [x] Header 컴포넌트 (Logo, Nav, UserAvatar)
 
 ### 프론트엔드 — 글쓰기 페이지
 - [ ] RepoSearch 컴포넌트 (입력, 자동완성 드롭다운, 검색)

@@ -1,9 +1,20 @@
+import { useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
+import Header from './Header';
 
 function Layout() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    fetch('/api/user')
+      .then((res) => res.json())
+      .then((data) => setUser(data))
+      .catch(() => {});
+  }, []);
+
   return (
     <div>
-      <header>Header (준비 중)</header>
+      <Header user={user} />
       <main>
         <Outlet />
       </main>
