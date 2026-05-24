@@ -37,7 +37,7 @@
 - [x] Header 컴포넌트 (Logo, Nav, UserAvatar)
 
 ### 프론트엔드 — 글쓰기 페이지
-- [ ] RepoSearch 컴포넌트 (입력, 자동완성 드롭다운, 검색)
+- [x] RepoSearch 컴포넌트 (입력, 자동완성 드롭다운, 검색)
 - [ ] BranchSelect 컴포넌트 (드롭다운)
 - [ ] CommitList / CommitItem 컴포넌트
 - [ ] CommitDetail 컴포넌트 (커밋 정보, AI 요약, 저장 버튼)
