@@ -1,8 +1,25 @@
 const router = require('express').Router();
+const axios = require('axios');
+
+const githubAxios = axios.create({
+  baseURL: 'https://api.github.com',
+  headers: { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` },
+});
 
 // GET /api/github/repos?q=
-router.get('/repos', (req, res) => {
-  res.json({ message: 'TODO' });
+router.get('/repos', async (req, res) => {
+  const { q } = req.query;
+  if (!q) return res.json([]);
+
+  try {
+    const response = await githubAxios.get('/search/repositories', {
+      params: { q },
+    });
+    const repos = response.data.items.map(({ name, full_name }) => ({ name, full_name }));
+    res.json(repos);
+  } catch (err) {
+    res.status(500).json({ error: '저장소 검색에 실패했습니다.' });
+  }
 });
 
 // GET /api/github/repos/:owner/:repo/branches

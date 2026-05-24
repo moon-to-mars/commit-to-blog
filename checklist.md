@@ -23,7 +23,7 @@
 - [x] Express 서버 기본 세팅 (라우터 구조, CORS, 환경변수 로드)
 
 ### 백엔드 — GitHub API 연동
-- [ ] 저장소 검색 API (`GET /api/github/repos?q=`)
+- [x] 저장소 검색 API (`GET /api/github/repos?q=`) (axios 사용)
 - [ ] 브랜치 목록 API (`GET /api/github/repos/:owner/:repo/branches`)
 - [ ] 커밋 목록 API (`GET /api/github/repos/:owner/:repo/commits?sha=`)
 - [ ] AI 요약 생성 API (`POST /api/github/.../commits/:sha/summary`) — 커밋 상세(patch) 조회 후 OpenAI 호출
