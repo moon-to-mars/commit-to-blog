@@ -30,10 +30,7 @@
 - [x] 유저 프로필 API (`GET /api/user`)
 
 ### 백엔드 — 포스트 API
-- [ ] 포스트 저장 (`POST /api/posts`)
-- [ ] 포스트 목록 조회 (`GET /api/posts`)
-- [ ] 포스트 상세 조회 (`GET /api/posts/:id`)
-- [ ] 포스트 수정 (`PATCH /api/posts/:id`)
+- [ ] 포스트 API 전체 구현 (Post 모델 + 저장/목록/상세/수정, mongoose)
 
 ### 프론트엔드 — 공통
 - [ ] React Router 설정 및 Layout 컴포넌트
