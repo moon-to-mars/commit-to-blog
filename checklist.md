@@ -33,7 +33,7 @@
 - [x] 포스트 API 전체 구현 (Post 모델 + 저장/목록/상세/수정, mongoose)
 
 ### 프론트엔드 — 공통
-- [ ] React Router 설정 및 Layout 컴포넌트
+- [x] React Router 설정 및 Layout 컴포넌트
 - [ ] Header 컴포넌트 (Logo, Nav, UserAvatar)
 
 ### 프론트엔드 — 글쓰기 페이지
