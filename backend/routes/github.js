@@ -1,13 +1,8 @@
 const router = require('express').Router();
-const axios = require('axios');
 const OpenAI = require('openai');
+const githubAxios = require('../lib/github');
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-
-const githubAxios = axios.create({
-  baseURL: 'https://api.github.com',
-  headers: { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` },
-});
 
 // GET /api/github/repos?q=
 router.get('/repos', async (req, res) => {

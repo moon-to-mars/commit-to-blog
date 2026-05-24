@@ -27,7 +27,7 @@
 - [x] 브랜치 목록 API (`GET /api/github/repos/:owner/:repo/branches`)
 - [x] 커밋 목록 API (`GET /api/github/repos/:owner/:repo/commits?sha=`)
 - [x] AI 요약 생성 API (`POST /api/github/.../commits/:sha/summary`) — 커밋 상세(patch) 조회 후 OpenAI 호출
-- [ ] 유저 프로필 API (`GET /api/user`)
+- [x] 유저 프로필 API (`GET /api/user`)
 
 ### 백엔드 — 포스트 API
 - [ ] 포스트 저장 (`POST /api/posts`)
