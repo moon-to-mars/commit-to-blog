@@ -20,7 +20,7 @@
 - [x] frontend / backend 폴더 구조 및 package.json 초기 세팅 (Vite+React JS / Express, npm, cors 패키지)
 - [x] .env 파일 설정 (GITHUB_TOKEN, OPENAI_API_KEY)
 - [x] MongoDB 연결 설정 (mongoose, Atlas, db.js 분리, Google DNS 우회)
-- [ ] Express 서버 기본 세팅 (라우터 구조, CORS, 환경변수 로드)
+- [x] Express 서버 기본 세팅 (라우터 구조, CORS, 환경변수 로드)
 
 ### 백엔드 — GitHub API 연동
 - [ ] 저장소 검색 API (`GET /api/github/repos?q=`)
