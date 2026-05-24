@@ -35,8 +35,23 @@ router.get('/repos/:owner/:repo/branches', async (req, res) => {
 });
 
 // GET /api/github/repos/:owner/:repo/commits?sha=
-router.get('/repos/:owner/:repo/commits', (req, res) => {
-  res.json({ message: 'TODO' });
+router.get('/repos/:owner/:repo/commits', async (req, res) => {
+  const { owner, repo } = req.params;
+  const { sha } = req.query;
+  try {
+    const response = await githubAxios.get(`/repos/${owner}/${repo}/commits`, {
+      params: { sha },
+    });
+    const commits = response.data.map((item) => ({
+      sha: item.sha,
+      message: item.commit.message,
+      author: item.commit.author.name,
+      date: item.commit.author.date,
+    }));
+    res.json(commits);
+  } catch (err) {
+    res.status(500).json({ error: '커밋 목록을 불러오지 못했습니다.' });
+  }
 });
 
 // POST /api/github/repos/:owner/:repo/commits/:sha/summary
